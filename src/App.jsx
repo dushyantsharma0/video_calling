@@ -14,7 +14,7 @@ function App() {
    {/* router and route set  */}
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/room/:id" element={<Videocall/>} />
+        <Route path="/room" element={<Videocall/>} />
       
     </Routes>
     

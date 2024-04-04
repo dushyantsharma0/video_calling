@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 const Home = () => {
     const [name, setName] = useState('');
-    const navigate = useNavigate();
-  
-    const handleSubmit = () => {
-       if(name==''){
-        alert('Please enter your name');
-       }else{
-        navigate(`/room/${name}`);
-       }
-     
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    if (name === '') {
+      alert('Please enter your name');
+    } else {
+      navigate(`/room?name=${name}`); // Navigating to the '/room' route with the entered name as a query parameter
     }
+  }
   
     return (
       <>
